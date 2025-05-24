@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Vérifier que le script Python existe
-const pythonScriptPath = path.join(__dirname, "..", "transcribe_to_srt.py");
+const pythonScriptPath = path.join(__dirname, "transcribe_to_srt.py");
 if (!fs.existsSync(pythonScriptPath)) {
   console.error("❌ Le script Python n'existe pas à:", pythonScriptPath);
   process.exit(1);
